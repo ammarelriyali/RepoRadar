@@ -9,7 +9,7 @@ import Foundation
 extension Constants {
     
     struct RepositoriesList {
-        static let appName = "ic_empty_avatar"
+        static let appName = "RepoRadar"
        
     }
 }

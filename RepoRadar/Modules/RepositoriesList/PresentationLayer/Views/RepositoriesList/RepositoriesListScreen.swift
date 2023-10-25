@@ -37,7 +37,8 @@ struct RepositoriesListScreen: View {
                                 viewModel.loadMoreRepostory()
                             }
                         Spacer()
-                    }.isHidden(viewModel.isLoading,remove: true)
+                    }.isHidden(viewModel.isLoading || viewModel.listIsFull
+                               ,remove: true)
                     Spacer()
                 }.isHidden(viewModel.repositories.isEmpty, remove: true)
                 

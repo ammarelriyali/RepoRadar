@@ -11,7 +11,8 @@ class RepositoriesListViewModel: ObservableObject {
     
     @Published var repositories: [RepositoryDomainModel] = []
     @Published var isLoading: Bool = false
-    
+    @Published var listIsFull = true
+
     func loadMoreRepostory(){
         
     } 
