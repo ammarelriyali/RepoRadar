@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct TaskInfoDomainModel {
+struct RepositoryDomainModel {
     
     var id: Int?
-    var ownerName: Int?
+    var ownerName: String?
     var repositoryName: String?
     var repositoryImage: String?
     var avatar: String?

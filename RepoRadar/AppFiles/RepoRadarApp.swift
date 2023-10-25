@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct RepoRadarApp: App {
+    let viewModel = RepositoriesListViewModel()
     var body: some Scene {
         WindowGroup {
-            RepositoriesListScreen()
+            RepositoriesListScreen(viewModel: viewModel)
         }
     }
 }
