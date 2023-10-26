@@ -13,6 +13,9 @@
 		04540EF42AEAC2690051846D /* TypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EF32AEAC2690051846D /* TypeEnum.swift */; };
 		04540EF62AEAC6BB0051846D /* OwnerDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EF52AEAC6BB0051846D /* OwnerDomainModel.swift */; };
 		04540EF82AEAC7030051846D /* RepositoriesRepoImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EF72AEAC7030051846D /* RepositoriesRepoImp.swift */; };
+		04540EFA2AEACB610051846D /* RepositoriesUseCaseImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EF92AEACB610051846D /* RepositoriesUseCaseImp.swift */; };
+		04540EFC2AEACB730051846D /* RepositoriesUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EFB2AEACB730051846D /* RepositoriesUseCaseProtocol.swift */; };
+		04540EFE2AEACC650051846D /* RepositoriesRepoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EFD2AEACC650051846D /* RepositoriesRepoProtocol.swift */; };
 		049EF8D42AE83D15009847A5 /* RepoRadarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EF8D32AE83D15009847A5 /* RepoRadarApp.swift */; };
 		049EF8D82AE83D16009847A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049EF8D72AE83D16009847A5 /* Assets.xcassets */; };
 		049EF8DB2AE83D16009847A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049EF8DA2AE83D16009847A5 /* Preview Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		04540EF32AEAC2690051846D /* TypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeEnum.swift; sourceTree = "<group>"; };
 		04540EF52AEAC6BB0051846D /* OwnerDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerDomainModel.swift; sourceTree = "<group>"; };
 		04540EF72AEAC7030051846D /* RepositoriesRepoImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRepoImp.swift; sourceTree = "<group>"; };
+		04540EF92AEACB610051846D /* RepositoriesUseCaseImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesUseCaseImp.swift; sourceTree = "<group>"; };
+		04540EFB2AEACB730051846D /* RepositoriesUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesUseCaseProtocol.swift; sourceTree = "<group>"; };
+		04540EFD2AEACC650051846D /* RepositoriesRepoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRepoProtocol.swift; sourceTree = "<group>"; };
 		049EF8D02AE83D15009847A5 /* RepoRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049EF8D32AE83D15009847A5 /* RepoRadarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRadarApp.swift; sourceTree = "<group>"; };
 		049EF8D72AE83D16009847A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -233,6 +239,7 @@
 		04B8874F2AE8435800237A23 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				04540EFD2AEACC650051846D /* RepositoriesRepoProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -240,6 +247,8 @@
 		04B887502AE8437C00237A23 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				04540EF92AEACB610051846D /* RepositoriesUseCaseImp.swift */,
+				04540EFB2AEACB730051846D /* RepositoriesUseCaseProtocol.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -404,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B9E4572AE9B87200568084 /* NetworkClient.swift in Sources */,
+				04540EFE2AEACC650051846D /* RepositoriesRepoProtocol.swift in Sources */,
 				04B8876A2AE8593600237A23 /* ColorsExtension.swift in Sources */,
 				04B9E4562AE9B87200568084 /* AnyNetwork.swift in Sources */,
 				049EF8D42AE83D15009847A5 /* RepoRadarApp.swift in Sources */,
@@ -412,6 +422,7 @@
 				04540EF62AEAC6BB0051846D /* OwnerDomainModel.swift in Sources */,
 				04540EF42AEAC2690051846D /* TypeEnum.swift in Sources */,
 				04B9E44D2AE9B1DF00568084 /* RepositoriesViewModel.swift in Sources */,
+				04540EFC2AEACB730051846D /* RepositoriesUseCaseProtocol.swift in Sources */,
 				04BD22962AE98E0500B2514A /* RepositoryCardView.swift in Sources */,
 				04B887582AE846E200237A23 /* View+IsHidden.swift in Sources */,
 				04540EF12AEAC2160051846D /* OwnerDataModel.swift in Sources */,
@@ -422,6 +433,7 @@
 				04540EEC2AEABBE20051846D /* RepostoriesDataMainResponse.swift in Sources */,
 				04B9E44F2AE9B65200568084 /* Constants+RepositoriesList.swift in Sources */,
 				04B9E4492AE9A67F00568084 /* Constants.swift in Sources */,
+				04540EFA2AEACB610051846D /* RepositoriesUseCaseImp.swift in Sources */,
 				04B9E44B2AE9A6A400568084 /* Constants+RepositoryCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
