@@ -7,11 +7,12 @@
 
 import Foundation
 import Alamofire
-import Combine
+
 protocol AnyNetwork {
+    
     func request<T: Decodable>(
         endPoint: String,
         parameters: Parameters?,
         method: HTTPMethod
-    ) -> Future<T, NetworkError>
+    ) async throws -> T
 }

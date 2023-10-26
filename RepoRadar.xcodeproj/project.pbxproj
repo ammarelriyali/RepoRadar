@@ -26,7 +26,6 @@
 		04B9E4562AE9B87200568084 /* AnyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4512AE9B87200568084 /* AnyNetwork.swift */; };
 		04B9E4572AE9B87200568084 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4522AE9B87200568084 /* Network.swift */; };
 		04B9E4582AE9B87200568084 /* NewtorkConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4542AE9B87200568084 /* NewtorkConstans.swift */; };
-		04B9E4592AE9B87200568084 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4552AE9B87200568084 /* NetworkError.swift */; };
 		04BD22962AE98E0500B2514A /* RepositoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD22952AE98E0500B2514A /* RepositoryCardView.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +47,6 @@
 		04B9E4512AE9B87200568084 /* AnyNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyNetwork.swift; sourceTree = "<group>"; };
 		04B9E4522AE9B87200568084 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		04B9E4542AE9B87200568084 /* NewtorkConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtorkConstans.swift; sourceTree = "<group>"; };
-		04B9E4552AE9B87200568084 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		04BD22952AE98E0500B2514A /* RepositoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				04B9E4542AE9B87200568084 /* NewtorkConstans.swift */,
-				04B9E4552AE9B87200568084 /* NetworkError.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -389,7 +386,6 @@
 				04BD22962AE98E0500B2514A /* RepositoryCardView.swift in Sources */,
 				04B887582AE846E200237A23 /* View+IsHidden.swift in Sources */,
 				04B9E4462AE9A4C400568084 /* ImageView.swift in Sources */,
-				04B9E4592AE9B87200568084 /* NetworkError.swift in Sources */,
 				04B9E4582AE9B87200568084 /* NewtorkConstans.swift in Sources */,
 				04B8875C2AE8546A00237A23 /* RepositoryDomainModel.swift in Sources */,
 				04B9E44F2AE9B65200568084 /* Constants+RepositoriesList.swift in Sources */,
