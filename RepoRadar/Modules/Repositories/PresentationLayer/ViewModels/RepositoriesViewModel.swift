@@ -1,5 +1,5 @@
 //
-//  RepositoriesListViewModel.swift
+//  RepositoriesViewModel.swift
 //  RepoRadar
 //
 //  Created by ammar on 25/10/2023.
@@ -7,16 +7,16 @@
 
 import Foundation
 
-class RepositoriesListViewModel: ObservableObject {
+class RepositoriesViewModel: ObservableObject {
     
     @Published var repositories: [RepositoryDomainModel] = []
     @Published var isLoading: Bool = false
     @Published var listIsFull = true
 
-    func loadMoreRepostory(){
+    func loadMoreRepostories(){
         
     } 
-    func loadRepostory(){
+    func loadRepostories(){
         
     }
     

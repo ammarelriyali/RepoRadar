@@ -10,7 +10,7 @@ import Alamofire
 
 protocol AnyNetwork {
     
-    func request<T: Decodable>(
+    func load<T: Decodable>(
         endPoint: String,
         parameters: Parameters?,
         method: HTTPMethod
