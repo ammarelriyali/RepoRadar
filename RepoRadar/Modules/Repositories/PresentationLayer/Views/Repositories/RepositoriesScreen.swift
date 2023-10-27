@@ -53,6 +53,9 @@ struct RepositoriesListScreen: View {
                     await viewModel.loadRepostoriesList()
                 }
         }.background(Color.theme.backgroundCard)
+            .overlay {
+                ResultView(resultMessage: $viewModel.errorMsg)
+            }
     }
 }
 

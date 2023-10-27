@@ -15,6 +15,8 @@
 		04540EFA2AEACB610051846D /* RepositoriesUseCaseImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EF92AEACB610051846D /* RepositoriesUseCaseImp.swift */; };
 		04540EFC2AEACB730051846D /* RepositoriesUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EFB2AEACB730051846D /* RepositoriesUseCaseProtocol.swift */; };
 		04540EFE2AEACC650051846D /* RepositoriesRepoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EFD2AEACC650051846D /* RepositoriesRepoProtocol.swift */; };
+		046C9DEA2AEB9E1A009E239E /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9DE92AEB9E1A009E239E /* ResultView.swift */; };
+		046C9DEC2AEB9F14009E239E /* Constants+ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9DEB2AEB9F14009E239E /* Constants+ResultView.swift */; };
 		049EF8D42AE83D15009847A5 /* RepoRadarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EF8D32AE83D15009847A5 /* RepoRadarApp.swift */; };
 		049EF8D82AE83D16009847A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049EF8D72AE83D16009847A5 /* Assets.xcassets */; };
 		049EF8DB2AE83D16009847A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049EF8DA2AE83D16009847A5 /* Preview Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		04540EF92AEACB610051846D /* RepositoriesUseCaseImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesUseCaseImp.swift; sourceTree = "<group>"; };
 		04540EFB2AEACB730051846D /* RepositoriesUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesUseCaseProtocol.swift; sourceTree = "<group>"; };
 		04540EFD2AEACC650051846D /* RepositoriesRepoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRepoProtocol.swift; sourceTree = "<group>"; };
+		046C9DE92AEB9E1A009E239E /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		046C9DEB2AEB9F14009E239E /* Constants+ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+ResultView.swift"; sourceTree = "<group>"; };
 		049EF8D02AE83D15009847A5 /* RepoRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049EF8D32AE83D15009847A5 /* RepoRadarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRadarApp.swift; sourceTree = "<group>"; };
 		049EF8D72AE83D16009847A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 				04B9E4482AE9A67F00568084 /* Constants.swift */,
 				04B9E44A2AE9A6A400568084 /* Constants+RepositoryCard.swift */,
 				04B9E44E2AE9B65200568084 /* Constants+RepositoriesList.swift */,
+				046C9DEB2AEB9F14009E239E /* Constants+ResultView.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				04B9E4452AE9A4C400568084 /* ImageView.swift */,
+				046C9DE92AEB9E1A009E239E /* ResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 			files = (
 				04B9E4572AE9B87200568084 /* NetworkClient.swift in Sources */,
 				04540EFE2AEACC650051846D /* RepositoriesRepoProtocol.swift in Sources */,
+				046C9DEA2AEB9E1A009E239E /* ResultView.swift in Sources */,
 				04B8876A2AE8593600237A23 /* ColorsExtension.swift in Sources */,
 				04B9E4562AE9B87200568084 /* AnyNetwork.swift in Sources */,
 				049EF8D42AE83D15009847A5 /* RepoRadarApp.swift in Sources */,
@@ -423,6 +430,7 @@
 				04BD22962AE98E0500B2514A /* RepositoryCardView.swift in Sources */,
 				04B887582AE846E200237A23 /* View+IsHidden.swift in Sources */,
 				04540EF12AEAC2160051846D /* OwnerDataModel.swift in Sources */,
+				046C9DEC2AEB9F14009E239E /* Constants+ResultView.swift in Sources */,
 				04540EF82AEAC7030051846D /* RepositoriesRepoImp.swift in Sources */,
 				04B9E4462AE9A4C400568084 /* ImageView.swift in Sources */,
 				04B9E4582AE9B87200568084 /* NewtorkConstans.swift in Sources */,

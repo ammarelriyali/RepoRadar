@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 extension Constants {
     
     struct RepositoriesList {
