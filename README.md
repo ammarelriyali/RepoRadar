@@ -7,7 +7,7 @@
 [![Alamofire](https://img.shields.io/badge/Alamofire-latest-blue)](https://github.com/onevcat/Alamofire)
 
 
-Welcome to the RepoRader iOS project repository! This README provides an overview of the project structure, architecture, dependencies, common components, branching strategy, and other important information.
+Welcome to the RepoRader iOS project repository! This README provides an overview of the project structure, architecture, dependencies, common components and other important information.
 
 ## Table of Contents
 
