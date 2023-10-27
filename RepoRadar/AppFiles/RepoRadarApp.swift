@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct RepoRadarApp: App {
-    let viewModel = RepositoriesListViewModel()
+
     var body: some Scene {
         WindowGroup {
-            RepositoriesListScreen(viewModel: viewModel)
+            RepositoriesListScreen(viewModel:  RepositoriesViewModel(useCase: RepositoriesUseCaseImp(repository: RepositoriesRepoImp(network: NetworkClient.shared))))
         }
     }
 }

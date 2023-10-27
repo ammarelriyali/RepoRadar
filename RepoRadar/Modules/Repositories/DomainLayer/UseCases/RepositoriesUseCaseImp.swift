@@ -9,14 +9,14 @@ import Foundation
 import Alamofire
 
 struct RepositoriesUseCaseImp: RepositoriesUseCaseProtocol {
-    
+     
     private let repository: RepositoriesRepoProtocol
     
     init(repository: RepositoriesRepoProtocol) {
         self.repository = repository
     }
     
-    func getRepositories() async -> Result<[RepositoryDomainModel], AFError> {
+    func getRepositories(page: Int) async -> Result<[RepositoryDomainModel], AFError> {
         do {
             guard let repositoriesResponse = try await repository.getRepositories() else {
                 return .failure(.explicitlyCancelled)

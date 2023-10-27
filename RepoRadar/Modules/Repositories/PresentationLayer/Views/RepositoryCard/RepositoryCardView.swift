@@ -13,46 +13,47 @@ struct RepositoryCardView: View {
     let repository: RepositoryDomainModel
     
     var body: some View {
+        
         VStack(alignment: .leading, spacing: 0) {
             
-            ImageView(imageURL: repository.repositoryImage ?? "",
+            ImageView(imageURL: repository.image ?? "",
                       placeholder: Constants.RepositoryCard.placeholder)
             .scaledToFill()
             .frame(height: 250,alignment: .center)
             .clipped()
-            .isHidden(repository.repositoryImage == nil, remove: true)
+            .isHidden(repository.image == nil, remove: true)
             
             HStack(alignment: .center, spacing: 16) {
                 
-                ImageView(imageURL: repository.avatar ?? "",
+                ImageView(imageURL: repository.owner?.avatar ?? "",
                           placeholder: Constants.RepositoryCard.placeholder)
                 .frame(width: 70, height: 70)
                 .clipShape(Circle())
                 
                 VStack(alignment: .leading) {
-                    Text(repository.ownerName ?? "")
+                    
+                    Text(repository.owner?.name ?? "")
                         .font(.callout)
-                        .foregroundStyle(Color.secondaryColor)
+                        .foregroundStyle(Color.theme.secondary)
                     
-                    Text(repository.repositoryName ?? "")
+                    Text(repository.name ?? "")
                         .font(.headline)
-                        .foregroundStyle(Color.highlightColor)
-                    
+                        .foregroundStyle(Color.theme.highlight)
                 }
                 Spacer()
                 
-                Text(repository.data ?? "")
+                Text(repository.date ?? "")
                     .font(.caption)
-                    .foregroundStyle(Color.secondaryColor)
+                    .foregroundStyle(Color.theme.secondary)
                 
             }.padding(.all)
                 .lineLimit(1)
             
-        }.background(Color.primaryColor)
+        }.background(Color.theme.backgroundCard)
             .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.primaryColor, lineWidth: 1)
+                    .stroke(Color.theme.backgroundCard, lineWidth: 1)
             )
             
         
@@ -60,12 +61,14 @@ struct RepositoryCardView: View {
 }
 
 #Preview {
-    RepositoryCardView(repository: RepositoryDomainModel(id: 0,
-                                                         ownerName: "Ammar",
-                                                         repositoryName: "RepoRadar",
-                                                         repositoryImage:"nil",
-                                                         avatar: "",
-                                                         data: "21-10-2021"
-                                                        )
-    )
+    let owner = OwnerDomainModel(name: "Ammar", avatar: "")
+    
+    return RepositoryCardView(repository:
+         RepositoryDomainModel(nodeID: "0",
+                               name: "RepoRadar",
+                               image: "",
+                               date: "Last Month",
+                               owner: owner
+                                 ))
+    
 }

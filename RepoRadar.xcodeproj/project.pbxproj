@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04540EEC2AEABBE20051846D /* RepostoriesDataMainResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EEB2AEABBE20051846D /* RepostoriesDataMainResponse.swift */; };
 		04540EEE2AEAC0F60051846D /* RepostoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EED2AEAC0F60051846D /* RepostoryDataModel.swift */; };
 		04540EF12AEAC2160051846D /* OwnerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EF02AEAC2160051846D /* OwnerDataModel.swift */; };
 		04540EF42AEAC2690051846D /* TypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EF32AEAC2690051846D /* TypeEnum.swift */; };
@@ -39,7 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04540EEB2AEABBE20051846D /* RepostoriesDataMainResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepostoriesDataMainResponse.swift; sourceTree = "<group>"; };
 		04540EED2AEAC0F60051846D /* RepostoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepostoryDataModel.swift; sourceTree = "<group>"; };
 		04540EF02AEAC2160051846D /* OwnerDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerDataModel.swift; sourceTree = "<group>"; };
 		04540EF32AEAC2690051846D /* TypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeEnum.swift; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 		04540EEA2AEABBAE0051846D /* ResponseModels */ = {
 			isa = PBXGroup;
 			children = (
-				04540EEB2AEABBE20051846D /* RepostoriesDataMainResponse.swift */,
 				04540EED2AEAC0F60051846D /* RepostoryDataModel.swift */,
 				04540EF02AEAC2160051846D /* OwnerDataModel.swift */,
 			);
@@ -430,7 +427,6 @@
 				04B9E4462AE9A4C400568084 /* ImageView.swift in Sources */,
 				04B9E4582AE9B87200568084 /* NewtorkConstans.swift in Sources */,
 				04B8875C2AE8546A00237A23 /* RepositoryDomainModel.swift in Sources */,
-				04540EEC2AEABBE20051846D /* RepostoriesDataMainResponse.swift in Sources */,
 				04B9E44F2AE9B65200568084 /* Constants+RepositoriesList.swift in Sources */,
 				04B9E4492AE9A67F00568084 /* Constants.swift in Sources */,
 				04540EFA2AEACB610051846D /* RepositoriesUseCaseImp.swift in Sources */,
@@ -574,8 +570,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -603,8 +598,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

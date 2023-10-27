@@ -9,7 +9,8 @@ import SwiftUI
 import SwiftUIPullToRefresh
 
 struct RepositoriesListScreen: View {
-    @ObservedObject var viewModel: RepositoriesListViewModel
+    
+    @ObservedObject var viewModel: RepositoriesViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20){
@@ -17,25 +18,28 @@ struct RepositoriesListScreen: View {
             Text(Constants.RepositoriesList.appName)
                 .font(.title)
                 .foregroundStyle(Color.highlight)
+                .padding(.horizontal)
             
             RefreshableScrollView(showsIndicators: false,
-                                  loadingViewBackgroundColor: .backgroundColor) { doneRefreshing in
-                viewModel.loadRepostory()
+                                  loadingViewBackgroundColor: .theme.background) { doneRefreshing in
+                Task {
+                    await viewModel.loadRepostoriesList()
+                }
                 doneRefreshing()
             } content: {
                 LazyVStack(spacing: 10) {
                     
                     Spacer()
                     
-                    ForEach($viewModel.repositories, id: \.id) { repository in
+                    ForEach($viewModel.repositories, id: \.nodeID) { repository in
                         RepositoryCardView(repository: repository.wrappedValue)
                     }
                     HStack {
                         Spacer()
                         ProgressView()
-                            .onAppear {
-                                viewModel.loadMoreRepostory()
-                            }
+//                            .onAppear {
+//                                await viewModel.loadRepostoriesList()
+//                            }
                         Spacer()
                     }.isHidden(viewModel.isLoading || viewModel.listIsFull
                                ,remove: true)
@@ -44,14 +48,14 @@ struct RepositoriesListScreen: View {
                 
             }.redacted(reason: viewModel.isLoading ? .placeholder : [])
                 .padding(.horizontal, 20)
-                .background(Color.backgroundColor)
-                .onAppear {
-                    viewModel.loadRepostory()
+                .background(Color.theme.background)
+                .task {
+                    await viewModel.loadRepostoriesList()
                 }
-        }
+        }.background(Color.theme.backgroundCard)
     }
 }
 
 #Preview {
-    RepositoriesListScreen(viewModel: RepositoriesListViewModel())
+    RepositoriesListScreen(viewModel: RepositoriesViewModel(useCase: RepositoriesUseCaseImp(repository: RepositoriesRepoImp(network: NetworkClient.shared))))
 }

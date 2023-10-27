@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct RepositoriesRepoImp {
+struct RepositoriesRepoImp: RepositoriesRepoProtocol {
     let network : AnyNetwork
     
     func getRepositories() async throws -> [RepositoryDomainModel]? {
-        let repositoriesResponse: RepostoriesDataMainResponse  = try await network.load(endPoint: "repositories",
+        let repositoriesResponse: [RepostoryDataModel]  = try await network.load(endPoint: "repositories",
                                                         parameters: nil,
                                                         method: .get)
 
-        return repositoriesResponse.result?.compactMap{ $0.mapToDomainModel() }
+        return repositoriesResponse.compactMap{ $0.mapToDomainModel() }
     }
 }

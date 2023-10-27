@@ -9,9 +9,11 @@ import Foundation
 import SwiftUI
 
 extension Color {
-    
-    static let backgroundColor = Color("Background")
-    static let highlightColor = Color("Highlight")
-    static let primaryColor = Color("PrimaryColor")
-    static let secondaryColor = Color("SecondaryColor")
+    struct theme {
+        static let background = Color("Background")
+        static let backgroundCard = Color("BackgroundCard")
+        static let highlight = Color("Highlight")
+        static let primary = Color("CustomPrimaryColor")
+        static let secondary = Color("CustomSecondaryColor")
+    }
 }

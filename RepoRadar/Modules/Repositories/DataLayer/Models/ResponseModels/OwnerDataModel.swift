@@ -44,7 +44,7 @@ struct OwnerDataModel: Codable {
     
     func mapToDomainModel() -> OwnerDomainModel? {
         
-        OwnerDomainModel(ownerName: login,
+        OwnerDomainModel(name: login,
                          avatar: avatarURL)
     }
 }

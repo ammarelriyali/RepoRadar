@@ -84,7 +84,7 @@ struct RepostoryDataModel: Codable {
     }
     
     func mapToDomainModel() -> RepositoryDomainModel {
-        RepositoryDomainModel(id: id,
+        RepositoryDomainModel(nodeID: nodeID,
                               name: name,
                               image: nil,
                               date: nil,

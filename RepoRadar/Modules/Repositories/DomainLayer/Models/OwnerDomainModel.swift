@@ -9,6 +9,6 @@ import Foundation
 
 struct OwnerDomainModel: Equatable {
     
-    var ownerName: String?
+    var name: String?
     var avatar: String?
 }

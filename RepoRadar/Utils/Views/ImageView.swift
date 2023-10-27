@@ -18,11 +18,11 @@ struct ImageView : View {
     var body: some View {
         
         KFImage(URL(string: imageURL))
+            .fade(duration: 0.25)
             .placeholder { _ in
                 Image(placeholder ?? "")
                     .resizable()
                     .isHidden(placeholder == nil,remove: true)
-                
             }.resizable()
     }
 }
