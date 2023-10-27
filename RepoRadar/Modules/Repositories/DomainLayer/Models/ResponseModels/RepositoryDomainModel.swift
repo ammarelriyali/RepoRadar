@@ -10,6 +10,9 @@ import Foundation
 struct RepositoryDomainModel: Equatable {
     
     var id: Int?
+    var starsCount: Int?
+    var viewsCount: Int?
+    var language: String?
     var name: String?
     var image: String?
     var description: String?

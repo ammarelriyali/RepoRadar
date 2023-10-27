@@ -40,11 +40,6 @@ struct RepositoryCardView: View {
                         .font(.headline)
                         .foregroundStyle(Color.theme.highlight)
                 }
-                Spacer()
-                
-                Text(repository.date ?? "")
-                    .font(.caption)
-                    .foregroundStyle(Color.theme.secondary)
                 
             }.padding(.all)
                 .lineLimit(1)
@@ -53,10 +48,36 @@ struct RepositoryCardView: View {
                 .font(.callout)
                 .foregroundStyle(Color.theme.highlight)
                 .padding(.horizontal)
-                .padding(.bottom)
+                .padding(.bottom,4)
                 .isHidden(repository.description == nil,
                           remove: true)
             
+                ImageWithTextView(imageName: "star.fill",
+                                  color: Color.yellow,
+                                  text: "\(repository.starsCount ?? 0 )")
+                .isHidden(repository.starsCount == nil || (repository.starsCount ?? 0) == 0,
+                          remove: true)
+             
+            
+            ImageWithTextView(imageName: "eye.fill",
+                              color: Color.theme.highlight,
+                                  text: "\(repository.viewsCount ?? 0 )")
+            .isHidden(repository.viewsCount == nil || (repository.starsCount ?? 0) == 0,
+                      remove: true)
+            
+            HStack(spacing: 0) {
+                ImageWithTextView(imageName: "text.alignleft",
+                                  color: Color.theme.highlight,
+                                  text: repository.language ?? "")
+                .isHidden(repository.language == nil
+                          ,remove: true)
+    
+                Spacer()
+                Text(repository.date ?? "")
+                    .font(.caption)
+                    .foregroundStyle(Color.theme.secondary)
+                    .padding(.trailing)
+            }.padding(.bottom)
         }.background(Color.theme.backgroundCard)
             .cornerRadius(10)
             .overlay(
@@ -73,10 +94,32 @@ struct RepositoryCardView: View {
     
     return RepositoryCardView(repository:
          RepositoryDomainModel(id: 0,
+                               starsCount: 12,
+                               viewsCount: 12323,
+                               language: "C",
                                name: "RepoRadar",
                                image: "",
                                description: "**Grit is no longer maintained. Check out libgit2/rugged.** Grit gives you object oriented read/write access to Git repositories via Ruby.", date: "Last Month",
                                owner: owner
                                  ))
     
+}
+struct ImageWithTextView: View {
+    
+    let imageName: String
+    let color: Color
+    let text: String
+    
+    var body: some View {
+        
+        HStack(spacing: 16) {
+            Image(systemName: imageName)
+                .foregroundStyle(color)
+                .frame(width: 10,height: 10)
+            
+            Text(text)
+                .foregroundStyle(Color.theme.highlight)
+        }.padding(.horizontal)
+            .padding(.vertical,2)
+    }
 }
