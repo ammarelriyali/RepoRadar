@@ -137,6 +137,7 @@ struct RepositoryDataModel: Codable {
         RepositoryDomainModel(id: id,
                               name: name,
                               image: nil,
+                              description: description,
                               date: createdAt,
                               owner: owner?.mapToDomainModel())
     }

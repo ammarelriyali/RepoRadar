@@ -49,7 +49,7 @@ struct RepositoriesListScreen: View {
                 }.isHidden(viewModel.repositories.isEmpty, remove: true)
                 
             }.redacted(reason: viewModel.isLoading ? .placeholder : [])
-                .padding(.horizontal, 20)
+                .padding(.horizontal, 8)
                 .background(Color.theme.background)
                 .task {
                     await viewModel.loadRepostoriesList()
