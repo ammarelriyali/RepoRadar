@@ -77,5 +77,6 @@ We have developed numerous common components that can be found in the `//RepoRad
 
 - `ResultView`
 - `ImageView`
-
+- `ImageWithTextView`
+  
 These components are designed to streamline UI development, enhance consistency, and improve code maintainability.
