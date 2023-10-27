@@ -29,5 +29,5 @@ struct ImageView : View {
 
 #Preview {
     
-    ImageView(imageURL: "", placeholder: "ic_empty_avatar")
+    ImageView(imageURL: "https://img.shields.io/badge/C-blue.svg", placeholder: "ic_empty_avatar")
 }

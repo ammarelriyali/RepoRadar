@@ -135,6 +135,9 @@ struct RepositoryDataModel: Codable {
     
     func mapToDomainModel() -> RepositoryDomainModel {
         RepositoryDomainModel(id: id,
+                              starsCount: stargazersCount,
+                              viewsCount: subscribersCount,
+                              language: language,
                               name: name,
                               image: nil,
                               description: description,

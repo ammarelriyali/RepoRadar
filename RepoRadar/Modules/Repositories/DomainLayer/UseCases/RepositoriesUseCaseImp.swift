@@ -40,6 +40,9 @@ struct RepositoriesUseCaseImp: RepositoriesUseCaseProtocol {
             }
             
             return .success(repositoriesResponse.map {RepositoryDomainModel(id: $0.id,
+                                                                            starsCount: $0.starsCount,
+                                                                            viewsCount: $0.viewsCount,
+                                                                            language: $0.language,
                                                                             name: $0.name,
                                                                             image: nil,
                                                                             description: checkDesciption($0.description),
