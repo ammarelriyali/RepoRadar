@@ -4,6 +4,8 @@
 [![Swift](https://img.shields.io/badge/swift-5.9-orange.svg)](https://swift.org/)
 [![SwiftUI](https://img.shields.io/badge/swiftui-3.0-brightgreen.svg)](https://developer.apple.com/documentation/swiftui)
 [![Kingfisher](https://img.shields.io/badge/Kingfisher-latest-blue)](https://github.com/onevcat/Kingfisher)
+[![Alamofire](https://img.shields.io/badge/Alamofire-latest-blue)](https://github.com/onevcat/Alamofire)
+
 
 Welcome to the RepoRader iOS project repository! This README provides an overview of the project structure, architecture, dependencies, common components, branching strategy, and other important information.
 
@@ -57,6 +59,7 @@ AlPrime utilizes the following Swift Package Manager (SPM) packages:
 
 - [Kingfisher](https://github.com/onevcat/Kingfisher.git)
 - [SwiftUIPullToRefresh](https://github.com/globulus/swiftui-pull-to-refresh)
+- [Alamofire](https://github.com/Alamofire)
 
 For easy installation, ensure you have SPM integrated into your Xcode project.
 
