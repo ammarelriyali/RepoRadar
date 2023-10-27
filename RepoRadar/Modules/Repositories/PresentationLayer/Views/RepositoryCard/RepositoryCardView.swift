@@ -49,6 +49,14 @@ struct RepositoryCardView: View {
             }.padding(.all)
                 .lineLimit(1)
             
+            Text(.init(repository.description ?? ""))
+                .font(.callout)
+                .foregroundStyle(Color.theme.highlight)
+                .padding(.horizontal)
+                .padding(.bottom)
+                .isHidden(repository.description == nil,
+                          remove: true)
+            
         }.background(Color.theme.backgroundCard)
             .cornerRadius(10)
             .overlay(
@@ -67,7 +75,7 @@ struct RepositoryCardView: View {
          RepositoryDomainModel(id: 0,
                                name: "RepoRadar",
                                image: "",
-                               date: "Last Month",
+                               description: "**Grit is no longer maintained. Check out libgit2/rugged.** Grit gives you object oriented read/write access to Git repositories via Ruby.", date: "Last Month",
                                owner: owner
                                  ))
     

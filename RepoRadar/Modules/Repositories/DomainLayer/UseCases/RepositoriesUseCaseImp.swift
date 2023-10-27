@@ -42,6 +42,7 @@ struct RepositoriesUseCaseImp: RepositoriesUseCaseProtocol {
             return .success(repositoriesResponse.map {RepositoryDomainModel(id: $0.id,
                                                                             name: $0.name,
                                                                             image: nil,
+                                                                            description: checkDesciption($0.description),
                                                                             date: getDate(dateString: $0.date ?? ""),
                                                                             owner: $0.owner)
             })
@@ -55,7 +56,11 @@ struct RepositoriesUseCaseImp: RepositoriesUseCaseProtocol {
         }
         
     }
-    private func getDate(dateString: String) -> String{
+    
+    private func checkDesciption(_ desciption: String?) -> String? {
+        return desciption == "null" ? nil : desciption
+    }
+    private func getDate(dateString: String) -> String {
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
