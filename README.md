@@ -65,7 +65,7 @@ For easy installation, ensure you have SPM integrated into your Xcode project.
 To get started with AlPrime on your local machine, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/ammarelriyali/RepoRadar`
-2. Open `AlprimeCap.xcodeproj` in Xcode.
+2. Open `RepoRader.xcodeproj` in Xcode.
 3. Build and run the app on your simulator or device.
 
 ## Common Components
