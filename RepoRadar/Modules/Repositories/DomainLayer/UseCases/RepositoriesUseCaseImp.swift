@@ -56,7 +56,7 @@ struct RepositoriesUseCaseImp: RepositoriesUseCaseProtocol {
         
     }
     private func getDate(dateString: String) -> String{
-        
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
         dateFormatter.timeZone = TimeZone(abbreviation: "UTC")

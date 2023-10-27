@@ -15,7 +15,7 @@ class RepositoriesViewModel: ObservableObject {
     @Published var listIsFull = false
     @Published var errorMsg = ""
 
-    private var page = 0
+    private var page = 1
     private var totalItemsCount = 0
     private var mainRepositories: [RepositoryDomainModel] = []
 
@@ -28,6 +28,7 @@ class RepositoriesViewModel: ObservableObject {
     private func getMainRepositories() async -> [RepositoryDomainModel] {
         
         mainRepositories = []
+        listIsFull = false
         let response = await useCase.getMainRepositories()
                 switch response {
         case .success(let repositories):
@@ -36,47 +37,58 @@ class RepositoriesViewModel: ObservableObject {
         case .failure(let error):
                     self.errorMsg = error.localizedDescription
                     print(errorMsg)
+                    
         }
         return []
     }
     
-    private func getRepositories() async -> [RepositoryDomainModel] {
+    private func getRepositories(range: Range<Int>) async -> [RepositoryDomainModel] {
         
         mainRepositories = await getMainRepositories()
         guard !mainRepositories.isEmpty else { return []}
         
-        let response = await useCase.getRepositories(repositories: mainRepositories[0...9].map{
+        let response = await useCase.getRepositories(repositories: mainRepositories[range].map{
             RepositoriesRequestDominModel(owner: $0.owner?.name ?? "",
                                           repository: $0.name ?? "")
         })
                 switch response {
         case .success(let repositories):
-                    print(repositories.count)
             return repositories
         case .failure(let error):
                     self.errorMsg = error.localizedDescription
                     print(errorMsg)
-        }
+          }
         return []
     }
 
     func loadRepostoriesList() async {
         setUpTasksDummyData()
-        page = 0
+        page = 1
         isLoading = true
-        repositories = await getRepositories()
+        repositories = await getRepositories(range: (0..<10))
         isLoading = false
-//        listIsFull = repositories.count == totalItemsCount
     }
 
     func loadMoreRepostories() async {
-//        page += 1
-//        repositories = await getRepositories()
-//        listIsFull = repositories.count == totalItemsCount
+        
+        let myRange = getRange()
+        page += 1
+        let newRepositories = await getRepositories(range: myRange)
+        repositories.append(contentsOf:newRepositories)
+        print("\(repositories.count) ")
+        listIsFull = repositories.count == totalItemsCount
     }
     
    
     
+    private func getRange() -> Range<Int>{
+        
+        let maxNumber = (page + 1) * 10
+        let maxRange = (maxNumber > totalItemsCount) ? ((totalItemsCount  % 10) + page * 10) : maxNumber
+        print("\(maxRange) ")
+print()
+        return (page * 10)..<maxRange
+    }
     private func setUpTasksDummyData() {
         
         guard repositories.isEmpty else { return }

@@ -37,9 +37,11 @@ struct RepositoriesListScreen: View {
                     HStack {
                         Spacer()
                         ProgressView()
-//                            .onAppear {
-//                                await viewModel.loadRepostoriesList()
-//                            }
+                            .onAppear {
+                                Task {
+                                    await viewModel.loadMoreRepostories()
+                                }
+                            }
                         Spacer()
                     }.isHidden(viewModel.isLoading || viewModel.listIsFull
                                ,remove: true)
