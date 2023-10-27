@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RepostoryDataModel: Codable {
+struct RepositoryDataModel: Codable {
     
     let id: Int?
     let nodeID, name, fullName: String?
@@ -35,7 +35,24 @@ struct RepostoryDataModel: Codable {
     let issuesURL, pullsURL, milestonesURL, notificationsURL: String?
     let labelsURL, releasesURL: String?
     let deploymentsURL: String?
-
+    let createdAt, updatedAt, pushedAt: String?
+    let gitURL, sshURL: String?
+    let cloneURL: String?
+    let svnURL: String?
+    let homepage: String?
+    let size, stargazersCount, watchersCount: Int?
+    let language: String?
+    let hasIssues, hasProjects, hasDownloads, hasWiki: Bool?
+    let hasPages, hasDiscussions: Bool?
+    let forksCount: Int?
+    let archived, disabled: Bool?
+    let openIssuesCount: Int?
+    let allowForking, isTemplate, webCommitSignoffRequired: Bool?
+    let visibility: String?
+    let forks, openIssues, watchers: Int?
+    let defaultBranch: String?
+    let networkCount, subscribersCount: Int?
+    
     enum CodingKeys: String, CodingKey {
         case id
         case nodeID = "node_id"
@@ -81,13 +98,46 @@ struct RepostoryDataModel: Codable {
         case labelsURL = "labels_url"
         case releasesURL = "releases_url"
         case deploymentsURL = "deployments_url"
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
+        case pushedAt = "pushed_at"
+        case gitURL = "git_url"
+        case sshURL = "ssh_url"
+        case cloneURL = "clone_url"
+        case svnURL = "svn_url"
+        case homepage
+        case size
+        case stargazersCount = "stargazers_count"
+        case watchersCount = "watchers_count"
+        case language
+        case hasIssues = "has_issues"
+        case hasProjects = "has_projects"
+        case hasDownloads = "has_downloads"
+        case hasWiki = "has_wiki"
+        case hasPages = "has_pages"
+        case hasDiscussions = "has_discussions"
+        case forksCount = "forks_count"
+        case archived
+        case disabled
+        case openIssuesCount = "open_issues_count"
+        case allowForking = "allow_forking"
+        case isTemplate = "is_template"
+        case webCommitSignoffRequired = "web_commit_signoff_required"
+        case visibility
+        case forks
+        case openIssues = "open_issues"
+        case watchers
+        case defaultBranch = "default_branch"
+        case networkCount = "network_count"
+        case subscribersCount = "subscribers_count"
     }
     
+    
     func mapToDomainModel() -> RepositoryDomainModel {
-        RepositoryDomainModel(nodeID: nodeID,
+        RepositoryDomainModel(id: id,
                               name: name,
                               image: nil,
-                              date: nil,
+                              date: createdAt,
                               owner: owner?.mapToDomainModel())
     }
 }

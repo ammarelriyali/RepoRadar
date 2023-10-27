@@ -10,5 +10,6 @@ import Foundation
 
 protocol RepositoriesRepoProtocol {
 
-    func getRepositories() async throws -> [RepositoryDomainModel]?
+    func getMainRepositories() async throws -> [RepositoryDomainModel]?
+    func getRepositories(repositories: [RepositoriesRequestDataModel]) async throws -> [RepositoryDomainModel]?
 }

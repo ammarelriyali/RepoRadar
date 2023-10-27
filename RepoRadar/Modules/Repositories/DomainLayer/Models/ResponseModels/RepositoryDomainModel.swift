@@ -9,7 +9,7 @@ import Foundation
 
 struct RepositoryDomainModel: Equatable {
     
-    var nodeID: String?
+    var id: Int?
     var name: String?
     var image: String?
     var date: String?

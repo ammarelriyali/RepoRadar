@@ -17,21 +17,41 @@ class RepositoriesViewModel: ObservableObject {
 
     private var page = 0
     private var totalItemsCount = 0
+    private var mainRepositories: [RepositoryDomainModel] = []
 
     private let useCase: RepositoriesUseCaseProtocol
     
     init(useCase: RepositoriesUseCaseProtocol) {
-        
         self.useCase = useCase
+    }
+    
+    private func getMainRepositories() async -> [RepositoryDomainModel] {
+        
+        mainRepositories = []
+        let response = await useCase.getMainRepositories()
+                switch response {
+        case .success(let repositories):
+                    totalItemsCount = repositories.count
+            return repositories
+        case .failure(let error):
+                    self.errorMsg = error.localizedDescription
+                    print(errorMsg)
+        }
+        return []
     }
     
     private func getRepositories() async -> [RepositoryDomainModel] {
         
-        let response = await useCase.getRepositories(page: page)
+        mainRepositories = await getMainRepositories()
+        guard !mainRepositories.isEmpty else { return []}
         
+        let response = await useCase.getRepositories(repositories: mainRepositories[0...9].map{
+            RepositoriesRequestDominModel(owner: $0.owner?.name ?? "",
+                                          repository: $0.name ?? "")
+        })
                 switch response {
         case .success(let repositories):
-                    totalItemsCount = repositories.count
+                    print(repositories.count)
             return repositories
         case .failure(let error):
                     self.errorMsg = error.localizedDescription
@@ -63,37 +83,37 @@ class RepositoriesViewModel: ObservableObject {
         let owner = OwnerDomainModel(name: "Ammar", avatar: "")
         
         repositories = [
-             RepositoryDomainModel(nodeID: "0",
+             RepositoryDomainModel(id: 0,
                                    name: "RepoRadar",
                                    image: "",
                                    date: "Last Month",
                                    owner: owner
                                      ),    
-             RepositoryDomainModel(nodeID: "1",
+             RepositoryDomainModel(id: 1,
                                    name: "RepoRadar",
-                                   image: "",
+                                   image: nil,
                                    date: "22-4-2011",
                                    owner: owner
                                      ),
-             RepositoryDomainModel(nodeID: "2",
+             RepositoryDomainModel(id: 2,
                                    name: "RepoRadar",
                                    image: "",
                                    date: "Last Month",
                                    owner: owner
                                      ),
-             RepositoryDomainModel(nodeID: "3",
+             RepositoryDomainModel(id: 3,
                                    name: "RepoRadar",
                                    image: "",
                                    date: "Last Month",
                                    owner: owner
                                      ),
-             RepositoryDomainModel(nodeID: "4",
+             RepositoryDomainModel(id: 4,
                                    name: "RepoRadar",
                                    image: "",
                                    date: "Last Month",
                                    owner: owner
                                      ),
-             RepositoryDomainModel(nodeID: "5",
+             RepositoryDomainModel(id: 5,
                                    name: "RepoRadar",
                                    image: "",
                                    date: "Last Month",

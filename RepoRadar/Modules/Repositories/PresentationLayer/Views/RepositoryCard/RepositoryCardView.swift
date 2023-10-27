@@ -64,7 +64,7 @@ struct RepositoryCardView: View {
     let owner = OwnerDomainModel(name: "Ammar", avatar: "")
     
     return RepositoryCardView(repository:
-         RepositoryDomainModel(nodeID: "0",
+         RepositoryDomainModel(id: 0,
                                name: "RepoRadar",
                                image: "",
                                date: "Last Month",

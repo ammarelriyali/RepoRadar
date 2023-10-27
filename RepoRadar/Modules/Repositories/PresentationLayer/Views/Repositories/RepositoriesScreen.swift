@@ -10,7 +10,7 @@ import SwiftUIPullToRefresh
 
 struct RepositoriesListScreen: View {
     
-    @ObservedObject var viewModel: RepositoriesViewModel
+    @StateObject var viewModel: RepositoriesViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20){
@@ -31,7 +31,7 @@ struct RepositoriesListScreen: View {
                     
                     Spacer()
                     
-                    ForEach($viewModel.repositories, id: \.nodeID) { repository in
+                    ForEach($viewModel.repositories, id: \.id) { repository in
                         RepositoryCardView(repository: repository.wrappedValue)
                     }
                     HStack {
