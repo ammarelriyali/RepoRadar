@@ -104,22 +104,3 @@ struct RepositoryCardView: View {
                                  ))
     
 }
-struct ImageWithTextView: View {
-    
-    let imageName: String
-    let color: Color
-    let text: String
-    
-    var body: some View {
-        
-        HStack(spacing: 16) {
-            Image(systemName: imageName)
-                .foregroundStyle(color)
-                .frame(width: 10,height: 10)
-            
-            Text(text)
-                .foregroundStyle(Color.theme.highlight)
-        }.padding(.horizontal)
-            .padding(.vertical,2)
-    }
-}
