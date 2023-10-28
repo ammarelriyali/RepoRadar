@@ -20,7 +20,7 @@ Welcome to the RepoRader iOS project repository! This README provides an overvie
 
 ## Project Overview
 
-Welcome to the RepoRader iOS project repository! AlPrimeCap is application for view repositories.
+Welcome to the RepoRader iOS project repository! RepoRader is application for view repositories on Github.
 ## Project Folder Structure
 
 The project follows a structured organization to ensure maintainability and scalability. Below is an overview of the main folders in the project:
