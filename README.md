@@ -55,7 +55,7 @@ This modular architecture promotes separation of concerns, code reusability, and
 
 ## Dependencies
 
-AlPrime utilizes the following Swift Package Manager (SPM) packages:
+RepoRader utilizes the following Swift Package Manager (SPM) packages:
 
 - [Kingfisher](https://github.com/onevcat/Kingfisher.git)
 - [SwiftUIPullToRefresh](https://github.com/globulus/swiftui-pull-to-refresh)
@@ -65,7 +65,7 @@ For easy installation, ensure you have SPM integrated into your Xcode project.
 
 ## Installation
 
-To get started with AlPrime on your local machine, follow these steps:
+To get started with RepoRader on your local machine, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/ammarelriyali/RepoRadar`
 2. Open `RepoRader.xcodeproj` in Xcode.
