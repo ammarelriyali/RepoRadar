@@ -40,7 +40,28 @@
 		04B9E4572AE9B87200568084 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4522AE9B87200568084 /* NetworkClient.swift */; };
 		04B9E4582AE9B87200568084 /* NewtorkConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4542AE9B87200568084 /* NewtorkConstans.swift */; };
 		04BD22962AE98E0500B2514A /* RepositoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD22952AE98E0500B2514A /* RepositoryCardView.swift */; };
+		6BFB4F202BF38CA5000A7C9F /* RepoRadarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB4F1F2BF38CA5000A7C9F /* RepoRadarUITests.swift */; };
+		6BFB4F222BF38CA5000A7C9F /* RepoRadarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB4F212BF38CA5000A7C9F /* RepoRadarUITestsLaunchTests.swift */; };
+		6BFB4F2F2BF38CC3000A7C9F /* RepoRadarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB4F2E2BF38CC3000A7C9F /* RepoRadarTests.swift */; };
+		6BFB4F372BF38CF8000A7C9F /* TestNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB4F362BF38CF8000A7C9F /* TestNetworkClient.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BFB4F232BF38CA5000A7C9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 049EF8C82AE83D15009847A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 049EF8CF2AE83D15009847A5;
+			remoteInfo = RepoRadar;
+		};
+		6BFB4F302BF38CC3000A7C9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 049EF8C82AE83D15009847A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 049EF8CF2AE83D15009847A5;
+			remoteInfo = RepoRadar;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		041865302AEC69EC00480D26 /* ImageWithTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithTextView.swift; sourceTree = "<group>"; };
@@ -74,6 +95,12 @@
 		04B9E4522AE9B87200568084 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		04B9E4542AE9B87200568084 /* NewtorkConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtorkConstans.swift; sourceTree = "<group>"; };
 		04BD22952AE98E0500B2514A /* RepositoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCardView.swift; sourceTree = "<group>"; };
+		6BFB4F1D2BF38CA5000A7C9F /* RepoRadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoRadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BFB4F1F2BF38CA5000A7C9F /* RepoRadarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRadarUITests.swift; sourceTree = "<group>"; };
+		6BFB4F212BF38CA5000A7C9F /* RepoRadarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRadarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6BFB4F2C2BF38CC3000A7C9F /* RepoRadarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoRadarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BFB4F2E2BF38CC3000A7C9F /* RepoRadarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRadarTests.swift; sourceTree = "<group>"; };
+		6BFB4F362BF38CF8000A7C9F /* TestNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +111,20 @@
 				04B887652AE8575400237A23 /* Kingfisher in Frameworks */,
 				04B887622AE8574700237A23 /* Alamofire in Frameworks */,
 				04B887682AE8576500237A23 /* SwiftUIPullToRefresh in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BFB4F1A2BF38CA5000A7C9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BFB4F292BF38CC3000A7C9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				049EF8D22AE83D15009847A5 /* RepoRadar */,
+				6BFB4F1E2BF38CA5000A7C9F /* RepoRadarUITests */,
+				6BFB4F2D2BF38CC3000A7C9F /* RepoRadarTests */,
 				049EF8D12AE83D15009847A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -144,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				049EF8D02AE83D15009847A5 /* RepoRadar.app */,
+				6BFB4F1D2BF38CA5000A7C9F /* RepoRadarUITests.xctest */,
+				6BFB4F2C2BF38CC3000A7C9F /* RepoRadarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -367,6 +412,32 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		6BFB4F1E2BF38CA5000A7C9F /* RepoRadarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6BFB4F1F2BF38CA5000A7C9F /* RepoRadarUITests.swift */,
+				6BFB4F212BF38CA5000A7C9F /* RepoRadarUITestsLaunchTests.swift */,
+			);
+			path = RepoRadarUITests;
+			sourceTree = "<group>";
+		};
+		6BFB4F2D2BF38CC3000A7C9F /* RepoRadarTests */ = {
+			isa = PBXGroup;
+			children = (
+				6BFB4F352BF38CCE000A7C9F /* Networking */,
+				6BFB4F2E2BF38CC3000A7C9F /* RepoRadarTests.swift */,
+			);
+			path = RepoRadarTests;
+			sourceTree = "<group>";
+		};
+		6BFB4F352BF38CCE000A7C9F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6BFB4F362BF38CF8000A7C9F /* TestNetworkClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,6 +463,42 @@
 			productReference = 049EF8D02AE83D15009847A5 /* RepoRadar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6BFB4F1C2BF38CA5000A7C9F /* RepoRadarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BFB4F272BF38CA5000A7C9F /* Build configuration list for PBXNativeTarget "RepoRadarUITests" */;
+			buildPhases = (
+				6BFB4F192BF38CA5000A7C9F /* Sources */,
+				6BFB4F1A2BF38CA5000A7C9F /* Frameworks */,
+				6BFB4F1B2BF38CA5000A7C9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BFB4F242BF38CA5000A7C9F /* PBXTargetDependency */,
+			);
+			name = RepoRadarUITests;
+			productName = RepoRadarUITests;
+			productReference = 6BFB4F1D2BF38CA5000A7C9F /* RepoRadarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		6BFB4F2B2BF38CC3000A7C9F /* RepoRadarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BFB4F322BF38CC3000A7C9F /* Build configuration list for PBXNativeTarget "RepoRadarTests" */;
+			buildPhases = (
+				6BFB4F282BF38CC3000A7C9F /* Sources */,
+				6BFB4F292BF38CC3000A7C9F /* Frameworks */,
+				6BFB4F2A2BF38CC3000A7C9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BFB4F312BF38CC3000A7C9F /* PBXTargetDependency */,
+			);
+			name = RepoRadarTests;
+			productName = RepoRadarTests;
+			productReference = 6BFB4F2C2BF38CC3000A7C9F /* RepoRadarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -399,11 +506,19 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					049EF8CF2AE83D15009847A5 = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					6BFB4F1C2BF38CA5000A7C9F = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 049EF8CF2AE83D15009847A5;
+					};
+					6BFB4F2B2BF38CC3000A7C9F = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 049EF8CF2AE83D15009847A5;
 					};
 				};
 			};
@@ -426,6 +541,8 @@
 			projectRoot = "";
 			targets = (
 				049EF8CF2AE83D15009847A5 /* RepoRadar */,
+				6BFB4F1C2BF38CA5000A7C9F /* RepoRadarUITests */,
+				6BFB4F2B2BF38CC3000A7C9F /* RepoRadarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -438,6 +555,20 @@
 				04B8875A2AE847DB00237A23 /* Colors.xcassets in Resources */,
 				049EF8DB2AE83D16009847A5 /* Preview Assets.xcassets in Resources */,
 				049EF8D82AE83D16009847A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BFB4F1B2BF38CA5000A7C9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BFB4F2A2BF38CC3000A7C9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +609,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6BFB4F192BF38CA5000A7C9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BFB4F202BF38CA5000A7C9F /* RepoRadarUITests.swift in Sources */,
+				6BFB4F222BF38CA5000A7C9F /* RepoRadarUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BFB4F282BF38CC3000A7C9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BFB4F2F2BF38CC3000A7C9F /* RepoRadarTests.swift in Sources */,
+				6BFB4F372BF38CF8000A7C9F /* TestNetworkClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BFB4F242BF38CA5000A7C9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 049EF8CF2AE83D15009847A5 /* RepoRadar */;
+			targetProxy = 6BFB4F232BF38CA5000A7C9F /* PBXContainerItemProxy */;
+		};
+		6BFB4F312BF38CC3000A7C9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 049EF8CF2AE83D15009847A5 /* RepoRadar */;
+			targetProxy = 6BFB4F302BF38CC3000A7C9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		049EF8DC2AE83D16009847A5 /* Debug */ = {
@@ -656,6 +818,76 @@
 			};
 			name = Release;
 		};
+		6BFB4F252BF38CA5000A7C9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RepoRadar.RepoRadarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RepoRadar;
+			};
+			name = Debug;
+		};
+		6BFB4F262BF38CA5000A7C9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RepoRadar.RepoRadarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RepoRadar;
+			};
+			name = Release;
+		};
+		6BFB4F332BF38CC3000A7C9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RepoRadar.RepoRadarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepoRadar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RepoRadar";
+			};
+			name = Debug;
+		};
+		6BFB4F342BF38CC3000A7C9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RepoRadar.RepoRadarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepoRadar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RepoRadar";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -673,6 +905,24 @@
 			buildConfigurations = (
 				049EF8DF2AE83D16009847A5 /* Debug */,
 				049EF8E02AE83D16009847A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BFB4F272BF38CA5000A7C9F /* Build configuration list for PBXNativeTarget "RepoRadarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BFB4F252BF38CA5000A7C9F /* Debug */,
+				6BFB4F262BF38CA5000A7C9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BFB4F322BF38CC3000A7C9F /* Build configuration list for PBXNativeTarget "RepoRadarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BFB4F332BF38CC3000A7C9F /* Debug */,
+				6BFB4F342BF38CC3000A7C9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
