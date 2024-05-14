@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NewtorkConstans {
+enum NetworkConstants {
     
     static let apiUrl =  "https://api.github.com/"
     static let acceptHeader = "accept"
