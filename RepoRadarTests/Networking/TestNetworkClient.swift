@@ -11,35 +11,24 @@ import Alamofire
 
 final class TestNetworkClient: XCTestCase {
     let networkClient = NetworkClient.shared
-    let networkClient = NetworkClient.shared
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
     
     // MARK: - Test Cases
-
     // Test successful data loading
     func testLoad_Successful() {
         // Given
-        let networkClient = NetworkClient.shared
-        let endPoint = "/exampleEndPoint"
-        let expectedData: YourDecodableType = // Provide expected data for successful response
+        let endPoint = "repositories"
         let expectation = expectation(description: "Successful data loading expectation")
 
         // When
         Task {
             do {
-                let loadedData: YourDecodableType = try await networkClient.load(
+                let loadedData: RepositoryDataModel = try await networkClient.load(
                     endPoint: endPoint,
                     parameters: nil,
                     method: .get
                 )
                 // Then
-                XCTAssertEqual(loadedData, expectedData)
+                XCTAssertNotNil(loadedData)
                 expectation.fulfill()
             } catch {
                 XCTFail("Unexpected error: \(error)")
@@ -61,7 +50,7 @@ final class TestNetworkClient: XCTestCase {
         Task {
             do {
                 // This should throw an error since the endpoint doesn't exist
-                _ = try await networkClient.load(
+                let loadedData: RepositoryDataModel = try await networkClient.load(
                     endPoint: endPoint,
                     parameters: nil,
                     method: .get
