@@ -31,7 +31,7 @@ struct RepositoriesUseCaseImp: RepositoriesUseCaseProtocol {
         }
     }
     
-    func getRepositories(repositories: [RepositoriesRequestDominModel]) async -> Result<[RepositoryDomainModel], Alamofire.AFError> {
+    func getRepositories(repositories: [RepositoriesRequestDomainModel]) async -> Result<[RepositoryDomainModel], Alamofire.AFError> {
         do {
             guard let repositoriesResponse = try await repository.getRepositories(repositories:
                                                                                     repositories.map{ $0.mapToDataModel()})

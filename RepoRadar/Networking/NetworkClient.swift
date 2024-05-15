@@ -11,7 +11,6 @@ import Alamofire
 struct NetworkClient: AnyNetwork {
     
     private typealias Constants = NetworkConstants
-    static let shared = NetworkClient()
 
     func load<T: Decodable>(
         endPoint: String,

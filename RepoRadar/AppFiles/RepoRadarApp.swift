@@ -12,7 +12,7 @@ struct RepoRadarApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RepositoriesListScreen(viewModel:  RepositoriesViewModel(useCase: RepositoriesUseCaseImp(repository: RepositoriesRepoImp(network: NetworkClient.shared))))
+            RepositoriesListScreen(viewModel:  RepositoriesViewModel(useCase: RepositoriesUseCaseImp(repository: RepositoriesRepoImp(network: NetworkClient()))))
         }
     }
 }

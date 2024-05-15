@@ -20,6 +20,7 @@ class RepositoriesViewModel: ObservableObject {
     private var mainRepositories: [RepositoryDomainModel] = []
     
     private let useCase: RepositoriesUseCaseProtocol
+    private let itemsPerPage = 10
     
     init(useCase: RepositoriesUseCaseProtocol) {
         self.useCase = useCase
@@ -46,9 +47,12 @@ class RepositoriesViewModel: ObservableObject {
         
         mainRepositories = await getMainRepositories()
         guard !mainRepositories.isEmpty else { return []}
-        
+        var range: Range<Int> = (0..<itemsPerPage)
+        if mainRepositories.count < itemsPerPage {
+            range = (0..<mainRepositories.count)
+        }
         let response = await useCase.getRepositories(repositories: mainRepositories[range].map{
-            RepositoriesRequestDominModel(owner: $0.owner?.name ?? "",
+            RepositoriesRequestDomainModel(owner: $0.owner?.name ?? "",
                                           repository: $0.name ?? "")
         })
         switch response {
@@ -86,6 +90,7 @@ class RepositoriesViewModel: ObservableObject {
         let maxRange = (maxNumber > totalItemsCount) ? ((totalItemsCount  % 10) + page * 10) : maxNumber
         return (page * 10)..<maxRange
     }
+    
     private func setUpTasksDummyData() {
         
         guard repositories.isEmpty else { return }

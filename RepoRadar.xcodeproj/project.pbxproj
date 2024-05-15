@@ -18,7 +18,7 @@
 		04540EFE2AEACC650051846D /* RepositoriesRepoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04540EFD2AEACC650051846D /* RepositoriesRepoProtocol.swift */; };
 		046C9DEA2AEB9E1A009E239E /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9DE92AEB9E1A009E239E /* ResultView.swift */; };
 		046C9DEC2AEB9F14009E239E /* Constants+ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9DEB2AEB9F14009E239E /* Constants+ResultView.swift */; };
-		046C9DF12AEBAA1A009E239E /* RepositoriesRequestDominModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9DF02AEBAA1A009E239E /* RepositoriesRequestDominModel.swift */; };
+		046C9DF12AEBAA1A009E239E /* RepositoriesRequestDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9DF02AEBAA1A009E239E /* RepositoriesRequestDomainModel.swift */; };
 		046C9DF52AEBAAA4009E239E /* RepositoriesRequestDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9DF42AEBAAA4009E239E /* RepositoriesRequestDataModel.swift */; };
 		049EF8D42AE83D15009847A5 /* RepoRadarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EF8D32AE83D15009847A5 /* RepoRadarApp.swift */; };
 		049EF8D82AE83D16009847A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049EF8D72AE83D16009847A5 /* Assets.xcassets */; };
@@ -38,12 +38,13 @@
 		04B9E44F2AE9B65200568084 /* Constants+RepositoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E44E2AE9B65200568084 /* Constants+RepositoriesList.swift */; };
 		04B9E4562AE9B87200568084 /* AnyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4512AE9B87200568084 /* AnyNetwork.swift */; };
 		04B9E4572AE9B87200568084 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4522AE9B87200568084 /* NetworkClient.swift */; };
-		04B9E4582AE9B87200568084 /* NewtorkConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4542AE9B87200568084 /* NewtorkConstans.swift */; };
+		04B9E4582AE9B87200568084 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4542AE9B87200568084 /* NetworkConstants.swift */; };
 		04BD22962AE98E0500B2514A /* RepositoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD22952AE98E0500B2514A /* RepositoryCardView.swift */; };
 		6BFB4F202BF38CA5000A7C9F /* RepoRadarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB4F1F2BF38CA5000A7C9F /* RepoRadarUITests.swift */; };
 		6BFB4F222BF38CA5000A7C9F /* RepoRadarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB4F212BF38CA5000A7C9F /* RepoRadarUITestsLaunchTests.swift */; };
-		6BFB4F2F2BF38CC3000A7C9F /* RepoRadarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB4F2E2BF38CC3000A7C9F /* RepoRadarTests.swift */; };
 		6BFB4F372BF38CF8000A7C9F /* TestNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB4F362BF38CF8000A7C9F /* TestNetworkClient.swift */; };
+		6BFB4F3C2BF393FD000A7C9F /* TestRepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB4F3B2BF393FD000A7C9F /* TestRepositoriesViewModel.swift */; };
+		6BFB4F3F2BF39590000A7C9F /* MockRepositoriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFB4F3E2BF39590000A7C9F /* MockRepositoriesUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +76,7 @@
 		04540EFD2AEACC650051846D /* RepositoriesRepoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRepoProtocol.swift; sourceTree = "<group>"; };
 		046C9DE92AEB9E1A009E239E /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		046C9DEB2AEB9F14009E239E /* Constants+ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+ResultView.swift"; sourceTree = "<group>"; };
-		046C9DF02AEBAA1A009E239E /* RepositoriesRequestDominModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRequestDominModel.swift; sourceTree = "<group>"; };
+		046C9DF02AEBAA1A009E239E /* RepositoriesRequestDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRequestDomainModel.swift; sourceTree = "<group>"; };
 		046C9DF42AEBAAA4009E239E /* RepositoriesRequestDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRequestDataModel.swift; sourceTree = "<group>"; };
 		049EF8D02AE83D15009847A5 /* RepoRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049EF8D32AE83D15009847A5 /* RepoRadarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRadarApp.swift; sourceTree = "<group>"; };
@@ -93,14 +94,15 @@
 		04B9E44E2AE9B65200568084 /* Constants+RepositoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+RepositoriesList.swift"; sourceTree = "<group>"; };
 		04B9E4512AE9B87200568084 /* AnyNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyNetwork.swift; sourceTree = "<group>"; };
 		04B9E4522AE9B87200568084 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
-		04B9E4542AE9B87200568084 /* NewtorkConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtorkConstans.swift; sourceTree = "<group>"; };
+		04B9E4542AE9B87200568084 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		04BD22952AE98E0500B2514A /* RepositoryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCardView.swift; sourceTree = "<group>"; };
 		6BFB4F1D2BF38CA5000A7C9F /* RepoRadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoRadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BFB4F1F2BF38CA5000A7C9F /* RepoRadarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRadarUITests.swift; sourceTree = "<group>"; };
 		6BFB4F212BF38CA5000A7C9F /* RepoRadarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRadarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6BFB4F2C2BF38CC3000A7C9F /* RepoRadarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoRadarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BFB4F2E2BF38CC3000A7C9F /* RepoRadarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRadarTests.swift; sourceTree = "<group>"; };
 		6BFB4F362BF38CF8000A7C9F /* TestNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkClient.swift; sourceTree = "<group>"; };
+		6BFB4F3B2BF393FD000A7C9F /* TestRepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositoriesViewModel.swift; sourceTree = "<group>"; };
+		6BFB4F3E2BF39590000A7C9F /* MockRepositoriesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositoriesUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +162,7 @@
 		046C9DEE2AEBA9A9009E239E /* RequestModels */ = {
 			isa = PBXGroup;
 			children = (
-				046C9DF02AEBAA1A009E239E /* RepositoriesRequestDominModel.swift */,
+				046C9DF02AEBAA1A009E239E /* RepositoriesRequestDomainModel.swift */,
 			);
 			path = RequestModels;
 			sourceTree = "<group>";
@@ -389,7 +391,7 @@
 		04B9E4532AE9B87200568084 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				04B9E4542AE9B87200568084 /* NewtorkConstans.swift */,
+				04B9E4542AE9B87200568084 /* NetworkConstants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -424,8 +426,8 @@
 		6BFB4F2D2BF38CC3000A7C9F /* RepoRadarTests */ = {
 			isa = PBXGroup;
 			children = (
+				6BFB4F382BF393C2000A7C9F /* Repositories */,
 				6BFB4F352BF38CCE000A7C9F /* Networking */,
-				6BFB4F2E2BF38CC3000A7C9F /* RepoRadarTests.swift */,
 			);
 			path = RepoRadarTests;
 			sourceTree = "<group>";
@@ -436,6 +438,39 @@
 				6BFB4F362BF38CF8000A7C9F /* TestNetworkClient.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		6BFB4F382BF393C2000A7C9F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				6BFB4F3D2BF3957B000A7C9F /* RepositoriesUseCase */,
+				6BFB4F392BF393D0000A7C9F /* ViewModel */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		6BFB4F392BF393D0000A7C9F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6BFB4F3A2BF393E2000A7C9F /* RepositoriesViewModel */,
+				6BFB4F3E2BF39590000A7C9F /* MockRepositoriesUseCase.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6BFB4F3A2BF393E2000A7C9F /* RepositoriesViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6BFB4F3B2BF393FD000A7C9F /* TestRepositoriesViewModel.swift */,
+			);
+			path = RepositoriesViewModel;
+			sourceTree = "<group>";
+		};
+		6BFB4F3D2BF3957B000A7C9F /* RepositoriesUseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoriesUseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -582,7 +617,7 @@
 				04B9E4572AE9B87200568084 /* NetworkClient.swift in Sources */,
 				04540EFE2AEACC650051846D /* RepositoriesRepoProtocol.swift in Sources */,
 				046C9DEA2AEB9E1A009E239E /* ResultView.swift in Sources */,
-				046C9DF12AEBAA1A009E239E /* RepositoriesRequestDominModel.swift in Sources */,
+				046C9DF12AEBAA1A009E239E /* RepositoriesRequestDomainModel.swift in Sources */,
 				04B8876A2AE8593600237A23 /* ColorsExtension.swift in Sources */,
 				04B9E4562AE9B87200568084 /* AnyNetwork.swift in Sources */,
 				049EF8D42AE83D15009847A5 /* RepoRadarApp.swift in Sources */,
@@ -599,7 +634,7 @@
 				046C9DEC2AEB9F14009E239E /* Constants+ResultView.swift in Sources */,
 				04540EF82AEAC7030051846D /* RepositoriesRepoImp.swift in Sources */,
 				04B9E4462AE9A4C400568084 /* ImageView.swift in Sources */,
-				04B9E4582AE9B87200568084 /* NewtorkConstans.swift in Sources */,
+				04B9E4582AE9B87200568084 /* NetworkConstants.swift in Sources */,
 				041865312AEC69EC00480D26 /* ImageWithTextView.swift in Sources */,
 				04B8875C2AE8546A00237A23 /* RepositoryDomainModel.swift in Sources */,
 				04B9E44F2AE9B65200568084 /* Constants+RepositoriesList.swift in Sources */,
@@ -622,8 +657,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BFB4F2F2BF38CC3000A7C9F /* RepoRadarTests.swift in Sources */,
+				6BFB4F3C2BF393FD000A7C9F /* TestRepositoriesViewModel.swift in Sources */,
 				6BFB4F372BF38CF8000A7C9F /* TestNetworkClient.swift in Sources */,
+				6BFB4F3F2BF39590000A7C9F /* MockRepositoriesUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

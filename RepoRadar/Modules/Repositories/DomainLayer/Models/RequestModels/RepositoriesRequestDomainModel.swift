@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RepositoriesRequestDominModel {
+struct RepositoriesRequestDomainModel {
     
     var owner: String
     var repository: String

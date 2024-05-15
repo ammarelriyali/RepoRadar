@@ -10,7 +10,7 @@ import Alamofire
 @testable import RepoRadar
 
 final class TestNetworkClient: XCTestCase {
-    let networkClient = NetworkClient.shared
+    let networkClient = NetworkClient()
     
     // MARK: - Test Cases
     // Test successful data loading
@@ -42,7 +42,6 @@ final class TestNetworkClient: XCTestCase {
     // Test error handling
     func testLoad_Error() {
         // Given
-        let networkClient = NetworkClient.shared
         let endPoint = "/nonExistingEndPoint"
         let expectation = expectation(description: "Error handling expectation")
 
@@ -50,7 +49,7 @@ final class TestNetworkClient: XCTestCase {
         Task {
             do {
                 // This should throw an error since the endpoint doesn't exist
-                let loadedData: RepositoryDataModel = try await networkClient.load(
+                let _: RepositoryDataModel = try await networkClient.load(
                     endPoint: endPoint,
                     parameters: nil,
                     method: .get
