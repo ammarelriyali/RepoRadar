@@ -8,9 +8,9 @@
 import Foundation
 struct RepositoriesRemoteDataSource: RepositoriesRemoteDataSourceProtocol {
     
-    let network : AnyNetwork
+    private let network : AnyNetwork
     
-    func getMainRepositories() async throws -> [RepositoryDataModel]? {
+    func getMainRepositories() async throws -> [RepositoryDataModel] {
         let repositoriesResponse: [RepositoryDataModel]  = try await network.load(endPoint: Constants.mainRepositoriesURL,
                                                         parameters: nil,
                                                         method: .get)
@@ -19,7 +19,7 @@ struct RepositoriesRemoteDataSource: RepositoriesRemoteDataSourceProtocol {
     }
     
     
-    func getRepositories(repositories: [RepositoriesRequestDataModel]) async throws -> [RepositoryDataModel]? {
+    func getRepositories(repositories: [RepositoriesRequestDataModel]) async throws -> [RepositoryDataModel] {
         try await withThrowingTaskGroup(of: [RepositoryDataModel].self) { group  in
             for repo in repositories {
                 group.addTask {

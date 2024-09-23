@@ -7,6 +7,6 @@
 
 protocol RepositoriesRemoteDataSourceProtocol {
     typealias Constants = RepositoriesRemoteDataSourceConstants
-    func getMainRepositories() async throws -> [RepositoryDataModel]?
-    func getRepositories(repositories: [RepositoriesRequestDataModel]) async throws -> [RepositoryDataModel]?
+    func getMainRepositories() async throws -> [RepositoryDataModel]
+    func getRepositories(repositories: [RepositoriesRequestDataModel]) async throws -> [RepositoryDataModel]
 }

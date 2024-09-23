@@ -6,10 +6,12 @@
 //
 
 import Foundation
-
+import Alamofire
 
 protocol RepositoriesRepoProtocol {
 
-    func getMainRepositories() async throws -> [RepositoryDomainModel]?
-    func getRepositories(repositories: [RepositoriesRequestDataModel]) async throws -> [RepositoryDomainModel]?
+    func getMainRepositories() async -> Result<[RepositoryDomainModel],
+                                               Error>
+    func getRepositories(repositories: [RepositoriesRequestDataModel]) async  -> Result<[RepositoryDomainModel],
+                                                                                        Error>
 }
