@@ -12,6 +12,7 @@ struct RepositoriesUseCaseImp: RepositoriesUseCaseProtocol {
     
     private let repository: RepositoriesRepoProtocol
     
+    
     init(repository: RepositoriesRepoProtocol) {
         self.repository = repository
     }
@@ -39,19 +40,20 @@ struct RepositoriesUseCaseImp: RepositoriesUseCaseProtocol {
                                                 language: $0.language,
                                                 name: $0.name,
                                                 image: nil,
-                                                description: checkDesciption($0.description),
+                                                description: checkDescriptionNullability($0.description),
                                                 date: getDate(dateString: $0.date ?? ""),
                                                 owner: $0.owner)}
     }
     
-    private func checkDesciption(_ desciption: String?) -> String? {
-        return desciption == "null" ? nil : desciption
+    private func checkDescriptionNullability(_ description: String?) -> String? {
+        return description == Constants.RepositoryUseCase.descriptionNull ? nil : description
     }
+    
     private func getDate(dateString: String) -> String {
 
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        dateFormatter.dateFormat = Constants.RepositoryUseCase.dateFormatDateWithTime
+        dateFormatter.timeZone = TimeZone(abbreviation: Constants.RepositoryUseCase.timeZone)
         
         if let date = dateFormatter.date(from: dateString) {
             
@@ -62,23 +64,22 @@ struct RepositoriesUseCaseImp: RepositoriesUseCaseProtocol {
             let monthsAgo = components.month!
             let yearsAgo = components.year!
             
-            if monthsAgo < 6 {
+            if monthsAgo < Constants.RepositoryUseCase.monthsAgoNumber {
                 
                 let resultFormatter = DateFormatter()
-                resultFormatter.dateFormat = "EEEE, MMM dd, yyyy"
+                resultFormatter.dateFormat = Constants.RepositoryUseCase.dateFormatDate
                 return resultFormatter.string(from: date)
             } else {
                 
-                if yearsAgo == 0 {
-                    return "\(monthsAgo) months ago"
+                if yearsAgo == Constants.RepositoryUseCase.yearsAgoNumber {
+                    return "\(monthsAgo) \(Constants.RepositoryUseCase.monthsAgoString)"
                 }
                 else {
-                    return "\(yearsAgo) years ago"
+                    return "\(yearsAgo) \(Constants.RepositoryUseCase.yearsAgoString)"
                 }
             }
         } else {
-            print("Invalid date string")
-            return ""
+            return Constants.RepositoryUseCase.nullValue
         }
     }
 }

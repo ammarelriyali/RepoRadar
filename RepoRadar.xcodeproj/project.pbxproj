@@ -35,9 +35,8 @@
 		04B8876A2AE8593600237A23 /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B887692AE8593600237A23 /* ColorsExtension.swift */; };
 		04B9E4462AE9A4C400568084 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4452AE9A4C400568084 /* ImageView.swift */; };
 		04B9E4492AE9A67F00568084 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4482AE9A67F00568084 /* Constants.swift */; };
-		04B9E44B2AE9A6A400568084 /* Constants+RepositoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E44A2AE9A6A400568084 /* Constants+RepositoryCard.swift */; };
 		04B9E44D2AE9B1DF00568084 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E44C2AE9B1DF00568084 /* RepositoriesViewModel.swift */; };
-		04B9E44F2AE9B65200568084 /* Constants+RepositoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E44E2AE9B65200568084 /* Constants+RepositoriesList.swift */; };
+		04B9E44F2AE9B65200568084 /* Constants+Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E44E2AE9B65200568084 /* Constants+Repositories.swift */; };
 		04B9E4562AE9B87200568084 /* AnyNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4512AE9B87200568084 /* AnyNetwork.swift */; };
 		04B9E4572AE9B87200568084 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4522AE9B87200568084 /* NetworkClient.swift */; };
 		04B9E4582AE9B87200568084 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9E4542AE9B87200568084 /* NetworkConstants.swift */; };
@@ -72,9 +71,8 @@
 		04B887692AE8593600237A23 /* ColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
 		04B9E4452AE9A4C400568084 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		04B9E4482AE9A67F00568084 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		04B9E44A2AE9A6A400568084 /* Constants+RepositoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+RepositoryCard.swift"; sourceTree = "<group>"; };
 		04B9E44C2AE9B1DF00568084 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
-		04B9E44E2AE9B65200568084 /* Constants+RepositoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+RepositoriesList.swift"; sourceTree = "<group>"; };
+		04B9E44E2AE9B65200568084 /* Constants+Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Repositories.swift"; sourceTree = "<group>"; };
 		04B9E4512AE9B87200568084 /* AnyNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyNetwork.swift; sourceTree = "<group>"; };
 		04B9E4522AE9B87200568084 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		04B9E4542AE9B87200568084 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
@@ -331,8 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				04B9E4482AE9A67F00568084 /* Constants.swift */,
-				04B9E44A2AE9A6A400568084 /* Constants+RepositoryCard.swift */,
-				04B9E44E2AE9B65200568084 /* Constants+RepositoriesList.swift */,
+				04B9E44E2AE9B65200568084 /* Constants+Repositories.swift */,
 				046C9DEB2AEB9F14009E239E /* Constants+ResultView.swift */,
 			);
 			path = Constants;
@@ -490,11 +487,10 @@
 				04B9E4582AE9B87200568084 /* NetworkConstants.swift in Sources */,
 				041865312AEC69EC00480D26 /* ImageWithTextView.swift in Sources */,
 				04B8875C2AE8546A00237A23 /* RepositoryDomainModel.swift in Sources */,
-				04B9E44F2AE9B65200568084 /* Constants+RepositoriesList.swift in Sources */,
+				04B9E44F2AE9B65200568084 /* Constants+Repositories.swift in Sources */,
 				04B9E4492AE9A67F00568084 /* Constants.swift in Sources */,
 				04540EFA2AEACB610051846D /* RepositoriesUseCaseImp.swift in Sources */,
 				0462E90C2CA2010600B67B89 /* RepositoriesRemoteDataSourceProtocol.swift in Sources */,
-				04B9E44B2AE9A6A400568084 /* Constants+RepositoryCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
