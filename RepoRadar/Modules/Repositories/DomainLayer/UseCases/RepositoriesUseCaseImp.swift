@@ -17,47 +17,31 @@ struct RepositoriesUseCaseImp: RepositoriesUseCaseProtocol {
     }
     
     func getMainRepositories() async -> Result<[RepositoryDomainModel], AFError> {
-        do {
-            guard let repositoriesResponse = try await repository.getMainRepositories() else {
-                return .failure(.explicitlyCancelled)
-            }
-            return .success(repositoriesResponse)
-        } catch {
-            if let error = error as? AFError {
-                return .failure(error)
-            } else {
-                return .failure(.explicitlyCancelled)
-            }
+
+        return await repository.getMainRepositories()
+    }
+    
+    func getRepositories(repositories: [RepositoriesRequestDomainModel]) async -> Result<[RepositoryDomainModel], AFError> {
+            let repositoriesResponse =  await repository.getRepositories(repositories:
+                                                                                    repositories.map{ $0.mapToDataModel()})
+        switch repositoriesResponse {
+        case .success(let repositories):
+            return .success(createCustomRepositoryDomainModel(repositories))
+        case .failure(let error):
+            return .failure(error)
         }
     }
     
-    func getRepositories(repositories: [RepositoriesRequestDominModel]) async -> Result<[RepositoryDomainModel], Alamofire.AFError> {
-        do {
-            guard let repositoriesResponse = try await repository.getRepositories(repositories:
-                                                                                    repositories.map{ $0.mapToDataModel()})
-            else {
-                return .failure(.explicitlyCancelled)
-            }
-            
-            return .success(repositoriesResponse.map {RepositoryDomainModel(id: $0.id,
-                                                                            starsCount: $0.starsCount,
-                                                                            viewsCount: $0.viewsCount,
-                                                                            language: $0.language,
-                                                                            name: $0.name,
-                                                                            image: nil,
-                                                                            description: checkDesciption($0.description),
-                                                                            date: getDate(dateString: $0.date ?? ""),
-                                                                            owner: $0.owner)
-            })
-            
-        } catch {
-            if let error = error as? AFError {
-                return .failure(error)
-            } else {
-                return .failure(.explicitlyCancelled)
-            }
-        }
-        
+    private func createCustomRepositoryDomainModel(_ repositories: [RepositoryDomainModel]) -> [RepositoryDomainModel] {
+        repositories.map {RepositoryDomainModel(id: $0.id,
+                                                starsCount: $0.starsCount,
+                                                viewsCount: $0.viewsCount,
+                                                language: $0.language,
+                                                name: $0.name,
+                                                image: nil,
+                                                description: checkDesciption($0.description),
+                                                date: getDate(dateString: $0.date ?? ""),
+                                                owner: $0.owner)}
     }
     
     private func checkDesciption(_ desciption: String?) -> String? {

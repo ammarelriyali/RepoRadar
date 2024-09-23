@@ -10,6 +10,9 @@ struct RepositoriesRemoteDataSource: RepositoriesRemoteDataSourceProtocol {
     
     private let network : AnyNetwork
     
+    init(network: AnyNetwork) {
+        self.network = network
+    }
     func getMainRepositories() async throws -> [RepositoryDataModel] {
         let repositoriesResponse: [RepositoryDataModel]  = try await network.load(endPoint: Constants.mainRepositoriesURL,
                                                         parameters: nil,

@@ -48,7 +48,7 @@ class RepositoriesViewModel: ObservableObject {
         guard !mainRepositories.isEmpty else { return []}
         
         let response = await useCase.getRepositories(repositories: mainRepositories[range].map{
-            RepositoriesRequestDominModel(owner: $0.owner?.name ?? "",
+            RepositoriesRequestDomainModel(owner: $0.owner?.name ?? "",
                                           repository: $0.name ?? "")
         })
         switch response {

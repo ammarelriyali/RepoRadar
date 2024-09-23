@@ -20,7 +20,7 @@
 		0462E90C2CA2010600B67B89 /* RepositoriesRemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462E90B2CA2010400B67B89 /* RepositoriesRemoteDataSourceProtocol.swift */; };
 		046C9DEA2AEB9E1A009E239E /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9DE92AEB9E1A009E239E /* ResultView.swift */; };
 		046C9DEC2AEB9F14009E239E /* Constants+ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9DEB2AEB9F14009E239E /* Constants+ResultView.swift */; };
-		046C9DF12AEBAA1A009E239E /* RepositoriesRequestDominModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9DF02AEBAA1A009E239E /* RepositoriesRequestDominModel.swift */; };
+		046C9DF12AEBAA1A009E239E /* RepositoriesRequestDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9DF02AEBAA1A009E239E /* RepositoriesRequestDomainModel.swift */; };
 		046C9DF52AEBAAA4009E239E /* RepositoriesRequestDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C9DF42AEBAAA4009E239E /* RepositoriesRequestDataModel.swift */; };
 		049EF8D42AE83D15009847A5 /* RepoRadarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049EF8D32AE83D15009847A5 /* RepoRadarApp.swift */; };
 		049EF8D82AE83D16009847A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049EF8D72AE83D16009847A5 /* Assets.xcassets */; };
@@ -59,7 +59,7 @@
 		0462E90B2CA2010400B67B89 /* RepositoriesRemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
 		046C9DE92AEB9E1A009E239E /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		046C9DEB2AEB9F14009E239E /* Constants+ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+ResultView.swift"; sourceTree = "<group>"; };
-		046C9DF02AEBAA1A009E239E /* RepositoriesRequestDominModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRequestDominModel.swift; sourceTree = "<group>"; };
+		046C9DF02AEBAA1A009E239E /* RepositoriesRequestDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRequestDomainModel.swift; sourceTree = "<group>"; };
 		046C9DF42AEBAAA4009E239E /* RepositoriesRequestDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRequestDataModel.swift; sourceTree = "<group>"; };
 		049EF8D02AE83D15009847A5 /* RepoRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049EF8D32AE83D15009847A5 /* RepoRadarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRadarApp.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		046C9DEE2AEBA9A9009E239E /* RequestModels */ = {
 			isa = PBXGroup;
 			children = (
-				046C9DF02AEBAA1A009E239E /* RepositoriesRequestDominModel.swift */,
+				046C9DF02AEBAA1A009E239E /* RepositoriesRequestDomainModel.swift */,
 			);
 			path = RequestModels;
 			sourceTree = "<group>";
@@ -468,7 +468,7 @@
 				04B9E4572AE9B87200568084 /* NetworkClient.swift in Sources */,
 				04540EFE2AEACC650051846D /* RepositoriesRepoProtocol.swift in Sources */,
 				046C9DEA2AEB9E1A009E239E /* ResultView.swift in Sources */,
-				046C9DF12AEBAA1A009E239E /* RepositoriesRequestDominModel.swift in Sources */,
+				046C9DF12AEBAA1A009E239E /* RepositoriesRequestDomainModel.swift in Sources */,
 				0462E90A2CA1FF1C00B67B89 /* RemoteDataSourceConstants.swift in Sources */,
 				04B8876A2AE8593600237A23 /* ColorsExtension.swift in Sources */,
 				04B9E4562AE9B87200568084 /* AnyNetwork.swift in Sources */,

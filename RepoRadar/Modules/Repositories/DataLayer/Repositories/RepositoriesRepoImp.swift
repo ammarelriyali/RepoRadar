@@ -17,20 +17,28 @@ struct RepositoriesRepoImp: RepositoriesRepoProtocol {
     }
     
     func getMainRepositories() async -> Result<[RepositoryDomainModel],
-                                                Error> {
+                                               AFError> {
         do {
             let repositoriesResponse: [RepositoryDataModel]  = try await remoteDataSource.getMainRepositories()
             return .success(repositoriesResponse.compactMap{ $0.mapToDomainModel() })
-        } catch let error {
-            return .failure(error)
+        } catch {
+            if let error = error as? AFError {
+                return .failure(error)
+            } else {
+                return .failure(.explicitlyCancelled)
+            }
         }
     }
-    func getRepositories(repositories: [RepositoriesRequestDataModel]) async -> Result<[RepositoryDomainModel], Error> {
+    func getRepositories(repositories: [RepositoriesRequestDataModel]) async -> Result<[RepositoryDomainModel], AFError> {
         do {
             let repositoriesResponse: [RepositoryDataModel]  = try await remoteDataSource.getRepositories(repositories: repositories)
             return .success(repositoriesResponse.compactMap{ $0.mapToDomainModel() })
-        } catch let error {
-            return .failure(error)
+        }  catch {
+            if let error = error as? AFError {
+                return .failure(error)
+            } else {
+                return .failure(.explicitlyCancelled)
+            }
         }
     }
 }

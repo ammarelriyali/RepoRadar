@@ -11,7 +11,7 @@ import Alamofire
 protocol RepositoriesRepoProtocol {
 
     func getMainRepositories() async -> Result<[RepositoryDomainModel],
-                                               Error>
+                                               AFError>
     func getRepositories(repositories: [RepositoriesRequestDataModel]) async  -> Result<[RepositoryDomainModel],
-                                                                                        Error>
+                                                                                        AFError>
 }
