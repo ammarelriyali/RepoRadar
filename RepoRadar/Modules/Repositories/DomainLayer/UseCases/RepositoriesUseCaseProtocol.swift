@@ -10,6 +10,6 @@ import Alamofire
 
 protocol RepositoriesUseCaseProtocol {
 
-    func getRepositories(repositories: [RepositoriesRequestDominModel]) async -> Result<[RepositoryDomainModel], AFError>
+    func getRepositories(repositories: [RepositoriesRequestDomainModel]) async -> Result<[RepositoryDomainModel], AFError>
     func getMainRepositories() async -> Result<[RepositoryDomainModel], AFError>
 }

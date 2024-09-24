@@ -6,36 +6,39 @@
 //
 
 import Foundation
+import Alamofire
 
 struct RepositoriesRepoImp: RepositoriesRepoProtocol {
 
-    let network : AnyNetwork
+    private let remoteDataSource: RepositoriesRemoteDataSourceProtocol
     
-    func getMainRepositories() async throws -> [RepositoryDomainModel]? {
-        let repositoriesResponse: [RepositoryDataModel]  = try await network.load(endPoint: "repositories",
-                                                        parameters: nil,
-                                                        method: .get)
-
-        return repositoriesResponse.compactMap{ $0.mapToDomainModel() }
+    init(remoteDataSource: RepositoriesRemoteDataSourceProtocol) {
+        self.remoteDataSource = remoteDataSource
     }
     
-    
-    func getRepositories(repositories: [RepositoriesRequestDataModel]) async throws -> [RepositoryDomainModel]? {
-        try await withThrowingTaskGroup(of: [RepositoryDomainModel].self) { group  in
-            for repo in repositories {
-                group.addTask {
-                    let repository: RepositoryDataModel = try await network.load(endPoint: "repos/\(repo.owner)/\(repo.repository)",
-                                                                              parameters: nil,
-                                                                              method: .get)
-                    return [repository.mapToDomainModel()]
-                }
+    func getMainRepositories() async -> Result<[RepositoryDomainModel],
+                                               AFError> {
+        do {
+            let repositoriesResponse: [RepositoryDataModel]  = try await remoteDataSource.getMainRepositories()
+            return .success(repositoriesResponse.compactMap{ $0.mapToDomainModel() })
+        } catch {
+            if let error = error as? AFError {
+                return .failure(error)
+            } else {
+                return .failure(.explicitlyCancelled)
             }
-            var result = [RepositoryDomainModel]()
-            for try await repo in group {
-                result.append(contentsOf: repo)
-            }
-            return result
         }
     }
-    
+    func getRepositories(repositories: [RepositoriesRequestDataModel]) async -> Result<[RepositoryDomainModel], AFError> {
+        do {
+            let repositoriesResponse: [RepositoryDataModel]  = try await remoteDataSource.getRepositories(repositories: repositories)
+            return .success(repositoriesResponse.compactMap{ $0.mapToDomainModel() })
+        }  catch {
+            if let error = error as? AFError {
+                return .failure(error)
+            } else {
+                return .failure(.explicitlyCancelled)
+            }
+        }
+    }
 }

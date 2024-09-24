@@ -10,7 +10,7 @@ import Alamofire
 
 struct NetworkClient: AnyNetwork {
     
-    private typealias Constans = NewtorkConstans
+    private typealias Constants = NetworkConstants
     static let shared = NetworkClient()
 
     func load<T: Decodable>(
@@ -19,9 +19,9 @@ struct NetworkClient: AnyNetwork {
         method: HTTPMethod
     ) async throws -> T {
         
-        let url = Constans.apiUrl + endPoint
+        let url = Constants.apiUrl + endPoint
         let headers: HTTPHeaders = [
-            Constans.acceptHeader: Constans.acceptHeaderContent]
+            Constants.acceptHeader: Constants.acceptHeaderContent]
         return try await AF.request(
             url,
             method: method,

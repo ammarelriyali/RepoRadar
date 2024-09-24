@@ -12,62 +12,48 @@ struct RepositoriesUseCaseImp: RepositoriesUseCaseProtocol {
     
     private let repository: RepositoriesRepoProtocol
     
+    
     init(repository: RepositoriesRepoProtocol) {
         self.repository = repository
     }
     
     func getMainRepositories() async -> Result<[RepositoryDomainModel], AFError> {
-        do {
-            guard let repositoriesResponse = try await repository.getMainRepositories() else {
-                return .failure(.explicitlyCancelled)
-            }
-            return .success(repositoriesResponse)
-        } catch {
-            if let error = error as? AFError {
-                return .failure(error)
-            } else {
-                return .failure(.explicitlyCancelled)
-            }
-        }
+
+        return await repository.getMainRepositories()
     }
     
-    func getRepositories(repositories: [RepositoriesRequestDominModel]) async -> Result<[RepositoryDomainModel], Alamofire.AFError> {
-        do {
-            guard let repositoriesResponse = try await repository.getRepositories(repositories:
+    func getRepositories(repositories: [RepositoriesRequestDomainModel]) async -> Result<[RepositoryDomainModel], AFError> {
+            let repositoriesResponse =  await repository.getRepositories(repositories:
                                                                                     repositories.map{ $0.mapToDataModel()})
-            else {
-                return .failure(.explicitlyCancelled)
-            }
-            
-            return .success(repositoriesResponse.map {RepositoryDomainModel(id: $0.id,
-                                                                            starsCount: $0.starsCount,
-                                                                            viewsCount: $0.viewsCount,
-                                                                            language: $0.language,
-                                                                            name: $0.name,
-                                                                            image: nil,
-                                                                            description: checkDesciption($0.description),
-                                                                            date: getDate(dateString: $0.date ?? ""),
-                                                                            owner: $0.owner)
-            })
-            
-        } catch {
-            if let error = error as? AFError {
-                return .failure(error)
-            } else {
-                return .failure(.explicitlyCancelled)
-            }
+        switch repositoriesResponse {
+        case .success(let repositories):
+            return .success(createCustomRepositoryDomainModel(repositories))
+        case .failure(let error):
+            return .failure(error)
         }
-        
     }
     
-    private func checkDesciption(_ desciption: String?) -> String? {
-        return desciption == "null" ? nil : desciption
+    private func createCustomRepositoryDomainModel(_ repositories: [RepositoryDomainModel]) -> [RepositoryDomainModel] {
+        repositories.map {RepositoryDomainModel(id: $0.id,
+                                                starsCount: $0.starsCount,
+                                                viewsCount: $0.viewsCount,
+                                                language: $0.language,
+                                                name: $0.name,
+                                                image: nil,
+                                                description: checkDescriptionNullability($0.description),
+                                                date: getDate(dateString: $0.date ?? ""),
+                                                owner: $0.owner)}
     }
+    
+    private func checkDescriptionNullability(_ description: String?) -> String? {
+        return description == Constants.RepositoryUseCase.descriptionNull ? nil : description
+    }
+    
     private func getDate(dateString: String) -> String {
 
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        dateFormatter.dateFormat = Constants.RepositoryUseCase.dateFormatDateWithTime
+        dateFormatter.timeZone = TimeZone(abbreviation: Constants.RepositoryUseCase.timeZone)
         
         if let date = dateFormatter.date(from: dateString) {
             
@@ -78,23 +64,22 @@ struct RepositoriesUseCaseImp: RepositoriesUseCaseProtocol {
             let monthsAgo = components.month!
             let yearsAgo = components.year!
             
-            if monthsAgo < 6 {
+            if monthsAgo < Constants.RepositoryUseCase.monthsAgoNumber {
                 
                 let resultFormatter = DateFormatter()
-                resultFormatter.dateFormat = "EEEE, MMM dd, yyyy"
+                resultFormatter.dateFormat = Constants.RepositoryUseCase.dateFormatDate
                 return resultFormatter.string(from: date)
             } else {
                 
-                if yearsAgo == 0 {
-                    return "\(monthsAgo) months ago"
+                if yearsAgo == Constants.RepositoryUseCase.yearsAgoNumber {
+                    return "\(monthsAgo) \(Constants.RepositoryUseCase.monthsAgoString)"
                 }
                 else {
-                    return "\(yearsAgo) years ago"
+                    return "\(yearsAgo) \(Constants.RepositoryUseCase.yearsAgoString)"
                 }
             }
         } else {
-            print("Invalid date string")
-            return ""
+            return Constants.RepositoryUseCase.nullValue
         }
     }
 }
